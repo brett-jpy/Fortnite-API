@@ -4,6 +4,14 @@ Uses the https://fortniteapi.io/ API
 
 ## Examples
 
+### Map
+
+The `current_map` and `current_map_poi` functions return a .png of the current map
+
+![poi_map](https://github.com/brett-jpy/Fortnite-API/blob/main/current_map.png?raw=true)
+
+### Player Stats
+
 The `player_stats` function returns the following data
 
 ```json
