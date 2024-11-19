@@ -6,6 +6,8 @@ Simple dashboard app to view player profile stats.
 
 * Documentation of endpoints are [here](https://fortniteapi.io/docs/#/) and [here](https://fortniteapi.io/)
 
+* Alternatively you can use [Fortnite-API](https://pypi.org/project/fortnite-api/) along with the [Python wrapper](https://pypi.org/project/fortnite-api/)
+
 ## Screenshot
 
 ![items-query](https://github.com/brett-jpy/Fortnite-API/blob/main/items_screenshot.png?raw=true)
