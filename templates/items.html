@@ -1,0 +1,82 @@
+{% extends "_base.html" %}
+
+<!-- Block Title -->
+{% block title %} Player Stats {% endblock %}
+
+{% block header %}
+{{super()}}
+<link rel="stylesheet" href="/static/items.css" />
+{% endblock %}
+
+<!-- Main Block -->
+{% block content %} 
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Right Side Column -->
+        <div class="col-2">
+
+            <fieldset>
+                <legend class="mt-4">Item Rarity</legend>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="loot" value="legendary" id="legCheck">
+                    <label class="form-check-label" for="legCheck" id="legCheckLabel">
+                        Legendary
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="loot" value="epic" id="epicCheck">
+                    <label class="form-check-label" for="epicCheckLabel">
+                        Epic
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="loot" value="rare" id="rareCheck">
+                    <label class="form-check-label" for="rareCheckLabel">
+                        Rare
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="loot" value="uncommon" id="uncommonCheck">
+                    <label class="form-check-label" for="uncommonCheckLabel">
+                        Uncommon
+                    </label>
+                </div>
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" name="loot" value="normal" id="normalCheck">
+                    <label class="form-check-label" for="normalCheckLabel">
+                        Normal
+                    </label>
+                </div>
+                <div>
+                    <label for="limit" class="form-label mt-4">Limit</label>
+                    <input type="text" style="color: black !important;" class="form-control" id="limit" placeholder="Select Limit (i.e., enter a number)">
+                    <small class="form-text text-muted">Cannot Exceed 50</small>
+                </div>
+                <div>
+                    <label for="offset" class="form-label mt-4">Offset</label>
+                    <input type="text" style="color: black !important;" class="form-control" id="offset" placeholder="Results to skip (i.e., skip the first 20)">
+                </div>
+                <button type="button" class="btn btn-outline-info" style="margin-top: 5px;" onclick="getItems()">Search</button>
+            </fieldset>
+
+        </div>
+        <!-- End Right Column -->
+
+        <!-- Center Column -->
+        <div class="col-10">
+            <div id="card-pouch">
+
+            </div>
+        </div>
+        <!-- End Center -->
+    </div>
+</div>
+{% endblock %}
+
+
+<!-- Scripts -->
+{% block script %} 
+{{super()}}
+<script src="/static/items.js"></script>
+{% endblock %}

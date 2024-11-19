@@ -1,0 +1,95 @@
+{% extends "_base.html" %}
+
+<!-- Block Title -->
+{% block title %} Player Stats {% endblock %}
+
+{% block style %}
+{{super()}}
+<link rel="stylesheet" href="/static/player.css" />
+{% endblock %}
+
+<!-- Main Block -->
+{% block content %} 
+<div class="container-fluid">
+    <div class="row">
+
+        <!-- Right Side Column -->
+        <div class="col-2">
+
+            <!-- Player Search Bar -->
+            <div class="player-search" style="margin-top: 10px;">
+                <div>
+                    <div class="form-floating mb-3">
+                      <input type="text" class="form-control" style="color: black !important;" id="floatingInput" placeholder="Enter Player Name">
+                      <label for="floatingInput">Name Here</label>
+                      <button type="button" class="btn btn-outline-info" style="margin-top: 5px;" onclick="getPlayer()">Search</button>
+                    </div>
+                </div>
+            </div>
+            <!-- End Player Search -->
+            
+            <!-- Empty Div -->
+            <div></div>
+
+            <!-- Returned Player Stats -->
+            <ul class="list-group" id="player-deets">
+                <li class="list-group-item d-flex justify-content-between align-items-center" id="username">
+                   <!-- Filled by Javascript -->
+                <span class="badge bg-primary rounded-pill"></span>
+                </li>
+            </ul>
+            <!-- End Stats -->
+            
+            <!-- Past Seasons -->
+            <ul class="list-group" id="past-seasons">
+               <!-- Populated by Javascript -->
+            </ul>
+            <!-- End Past Seasons -->
+  
+
+        </div>
+
+        <!-- Center Bar -->
+        <div class="col-10">
+
+            <table class="table table-hover">
+                <thead>
+                  <tr class="table-primary">
+                    <th scope="col">Game Mode</th>
+                    <th scope="col">First Place</th>
+                    <th scope="col">K/D</th>
+                    <th scope="col">Win Rate</th>
+                    <th scope="col">Kills</th>
+                    <th scope="col">Matches Played</th>
+                    <th scope="col">Minutes Played</th>
+                    <th scope="col">Last Played</th>
+                  </tr>
+                </thead>
+                <tbody id="solo-stats">
+                    <!-- Filled by Javascript -->
+                </tbody>
+
+                <tbody id="duo-stats">
+                    <!-- Filled by Javascript -->
+                </tbody>
+
+                <tbody id="trio-stats">
+                    <!-- Filled by Javascript -->
+                </tbody>
+
+                <tbody id="squad-stats">
+                    <!-- Filled by Javascript -->
+                </tbody>
+              </table>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
+
+
+<!-- Scripts -->
+{% block script %} 
+{{super()}}
+<script src="/static/player.js"></script>
+{% endblock %}
